@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify, render_template
+from dotenv import load_dotenv
 import requests
 import uuid
+import os
 
 # Configuration
-API_KEY = "1EMI69VunboWEeotFYhxegS8zl3T3bbdcQsmhyxxY7t8E6v9krOhJQQJ99ALAC77bzfXJ3w3AAABACOGkRfK"
+API_KEY = os.getenv('api_key')
 session_id = uuid.uuid4()
 
 ENDPOINT = "https://local-openai-instance.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview"
