@@ -8,7 +8,7 @@ import os
 API_KEY = os.getenv('api_key')
 session_id = uuid.uuid4()
 
-ENDPOINT = "https://local-openai-instance.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview"
+ENDPOINT = os.getenv("ENDPOINT")
 
 app = Flask(__name__)
 
